@@ -1,7 +1,7 @@
 import Map from "../contact/Map"
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Box, TextField, Button, Typography } from '@mui/material'
+import { Box, TextField, Button, Typography, useMediaQuery } from '@mui/material'
 import { toast } from 'react-toastify'
 
 const Contact = () => {
@@ -10,6 +10,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const ref = useRef()
+  const isMobile = useMediaQuery('(max-width: 600px)')
 
   const handleName = (event) => {
     setName(event.target.value);
@@ -49,11 +50,57 @@ const Contact = () => {
   }
 
 return (
-  <Box
-    height='100vh'
+  isMobile ? (
+    <Box
+    // height='100%'
+    marginBottom='-20rem'
   >
       <Box
-        width='100%' height='100%' display='flex' justifyContent='space-between' gap='50px'
+        // width='100%' gap='1rem'
+      >
+          <Box
+            display='flex' justifyContent='center' alignItems='center' padding='1rem'
+          >
+              <form
+              ref={ref} onSubmit={handleSubmit}
+              >
+                <Box
+                width='100%' display='flex' flexDirection='column' gap='2rem'
+                >
+                  <Typography
+                  variant='h2' fontWeight='200' color= 'lightgray' justifyContent='center' display='flex'
+                  >Contact Me</Typography>
+                  <TextField
+                    sx={{ padding: '0', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '0.8rem'}}
+                    placeholder='Name' name="name" value={name}
+                    error={!!error} helperText={error}
+                    onChange={handleName}
+                    />
+                  <TextField
+                    sx={{ padding: '0', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '0.8rem'}}
+                    placeholder='Email' name="email" value={email} error={!!error} helperText={error}
+                    onChange={handleEmail}
+                    />
+                  <TextField
+                    sx={{ padding: '0', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '0.8rem', gridRow: '10'}}
+                    placeholder='Write your message' name="message" multiline rows={5}
+                    value={message} error={!!error} helperText={error} onChange={handleMessage}
+                    />
+                  <Button
+                    sx={{ padding: '1rem', backgroundColor: 'lightblue', color:'black',
+                    border: 'none', borderRadius: '0.4rem', fontWeight: 'bold'}}
+                    type="submit">Send</Button>
+                </Box>
+              </form>
+          </Box>
+      </Box>
+  </Box>
+  ) : (
+    <Box
+    height='100%'
+  >
+      <Box
+        width='100%' height='100%' display='flex' justifyContent='space-between' gap='3rem'
       >
           <Box
             flex={1} display='flex' justifyContent='center' alignItems='center'
@@ -61,27 +108,31 @@ return (
               <form
               ref={ref} onSubmit={handleSubmit}
               >
-                <Box width='500px' display='flex' flexDirection='column' gap='25px'>
-                  <Typography variant='h1' fontWeight='200' color= 'lightgray'>Contact Me</Typography>
+                <Box
+                width='30rem' display='flex' flexDirection='column' gap='2rem'
+                >
+                  <Typography
+                  variant='h1' fontWeight='200' color= 'lightgray'
+                  >Contact Me</Typography>
                   <TextField
-                    sx={{ padding: '20px', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '10px'}}
+                    sx={{ padding: '0', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '0.8rem'}}
                     placeholder='Name' name="name" value={name}
                     error={!!error} helperText={error}
                     onChange={handleName}
                     />
                   <TextField
-                    sx={{ padding: '20px', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '10px'}}
+                    sx={{ padding: '0', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '0.8rem'}}
                     placeholder='Email' name="email" value={email} error={!!error} helperText={error}
                     onChange={handleEmail}
                     />
                   <TextField
-                    sx={{ padding: '20px', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '10px', gridRow: '10'}}
+                    sx={{ padding: '0', backgroundColor: '#e8e6e6', border: 'none', borderRadius: '0.8rem', gridRow: '10'}}
                     placeholder='Write your message' name="message" multiline rows={5}
                     value={message} error={!!error} helperText={error} onChange={handleMessage}
                     />
                   <Button
-                    sx={{ padding: '20px', backgroundColor: 'lightblue', color:'black',
-                    border: 'none', borderRadius: '5px', fontWeight: 'bold'}}
+                    sx={{ padding: '1rem', backgroundColor: 'lightblue', color:'black',
+                    border: 'none', borderRadius: '0.4rem', fontWeight: 'bold'}}
                     type="submit">Send</Button>
 
                 </Box>
@@ -89,12 +140,13 @@ return (
           </Box>
           <Box
             flex={1}
-            marginTop='50px'
           >
               <Map />
           </Box>
       </Box>
   </Box>
+  )
+
 )
 }
 
