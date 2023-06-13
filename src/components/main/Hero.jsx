@@ -219,6 +219,7 @@ const Hero = () => {
       display='flex'
       flexDirection='column'
       justifyContent='space-between'
+      maxHeight='120%'
     >
          <Box
             height='50%'

@@ -15,6 +15,7 @@ import {
 from 'react-router-dom'
 import Achievement from "./components/story/Achievement"
 import Memes from "./components/story/Memes"
+import Footer from "./components/main/Footer"
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
               <Route path='/contact' element={<Contact />} />
               <Route path="*" element={<h1>404 Page Not Found</h1>} />
             </Routes>
+            <Footer />
           </Box>
         </Box>
       </BrowserRouter>
