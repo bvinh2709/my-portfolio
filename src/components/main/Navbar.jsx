@@ -1,65 +1,66 @@
-import { Box, Button, Typography} from "@mui/material"
+import { Box, Button, useMediaQuery } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
     const navigate = useNavigate()
-
+    const isMobile = useMediaQuery('(max-width: 600px)')
     return (
-      <Box display='flex' justifyContent='center'>
-        {/* <Box display='flex' justifyContent='center' position='fixed'> */}
         <Box
-            width='1400px'
             display='flex'
-            justifyContent='space-between'
-            alignItems='center'
-            padding='10px 0px'
+            justifyContent="space-between"
+            padding="0.5rem 0"
+            maxHeight='80%'
+            width='100%'
+            maxWidth='100%'
         >
             <Box
                 display='flex'
                 alignItems='center'
-                gap='50px'
+                gap='0.5rem'
             >
                 <Button onClick={() => navigate('/')}>
-                    <img src='./img/FullLogo_Transparent_NoBuffer.png' alt='Brand logo' height='120px'/>
+                    <img src='./img/FullLogo_Transparent_NoBuffer.png' alt='Brand logo'
+                    height='120rem'
+                    />
                 </Button>
+                    <Box
+                        display='flex'
+                        gap='0.5rem'
+                        alignItems='center'
+                        flexDirection={isMobile ? 'column' : 'row'}
+
+                    >
+                        <Button
+                        onClick={() => navigate('/who')}
+                        sx={{color:'lightgray', width: '100%'}}
+                        >
+                            Story
+                        </Button>
+                        <Button
+                        onClick={() => navigate('/works')}
+                        sx={{color:'lightgray', width: '100%'}}
+                        >
+                            Works
+                        </Button>
+                        <Button
+                        onClick={() => navigate('/contact')}
+                        sx={{color:'lightgray', width: '100%'}}
+                        >
+                            Contact
+                        </Button>
+                    </Box>
+            </Box>
                 <Box
                     display='flex'
-                    gap='20px'
-                    list-style='none'
+                    alignItems='center'
+                    padding='1rem'
+                    justifyContent='center'
                 >
                     <Button
-                    onClick={() => navigate('/who')}
-                    // sx={{backgroundColor:'lightgray'}}
-                    sx={{color:'lightgray'}}
-                    >Story</Button>
-                    <Button
-                    onClick={() => navigate('/works')}
-                    // sx={{backgroundColor:'lightgray'}}
-                    sx={{color:'lightgray'}}
-                    >Works</Button>
-                    <Button
-                    onClick={() => navigate('/contact')}
-                    // sx={{backgroundColor:'lightgray'}}
-                    sx={{color:'lightgray'}}
-                    >Contact</Button>
+                        sx={{backgroundColor:'lightyellow', color:'black', borderRadius: '0.5rem'}}
+                        onClick={() => navigate('/contact')}
+                    >Hire Me!</Button>
                 </Box>
-            </Box>
-        </Box>
-        <Box
-            display='flex'
-            alignItems='center'
-            gap='20px'
-            justifyContent='center'
-        >
-                <Button
-                    width='100px'
-                    padding='10px'
-                    border='none'
-                    border-radius='5px'
-                    sx={{backgroundColor:'lightyellow', color:'black'}}
-                    onClick={() => navigate('/contact')}
-                >Hire Me!</Button>
-        </Box>
       </Box>
     )
   }
