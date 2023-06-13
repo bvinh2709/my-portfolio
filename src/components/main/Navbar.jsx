@@ -1,8 +1,10 @@
 import { Box, Button, IconButton, useMediaQuery, Menu, MenuItem } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 import MenuIcon from '@mui/icons-material/Menu';
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
+import WorkIcon from '@mui/icons-material/Work';
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 
 const Navbar = () => {
     const navigate = useNavigate()
@@ -138,18 +140,21 @@ const Navbar = () => {
                         sx={{color:'lightgray', width: '100%'}}
                         >
                             Story
+                            <SentimentVerySatisfiedIcon />
                         </Button>
                         <Button
                         onClick={() => navigate('/works')}
                         sx={{color:'lightgray', width: '100%'}}
                         >
                             Works
+                            <WorkIcon />
                         </Button>
                         <Button
                         onClick={() => navigate('/contact')}
                         sx={{color:'lightgray', width: '100%'}}
                         >
                             Contact
+                            <AddIcCallIcon />
                         </Button>
                     </Box>
             </Box>
