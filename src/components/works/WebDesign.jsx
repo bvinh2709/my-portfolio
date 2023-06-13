@@ -18,8 +18,8 @@ const WebDesign = () => {
           <Box
               padding='1.3rem'
               borderRadius='0.8rem' position='absolute'
-              top='0.5rem' right='15rem' fontSize='0.6rem' fontWeight={300}
-              sx={{ backgroundColor: 'white', color:'black', width: '10rem', height:'7rem',}}
+              top='0.5rem' right='15rem' fontSize='0.8rem' fontWeight={300}
+              sx={{ backgroundColor: 'white', color:'black', width: '10rem', height:'8rem',}}
           >Online restaurant that sells soul food and let customers check out through Stripe. <a href='https://www.loom.com/share/a74c2fdb12c8410d9f33f7b133cc9008?sid=4148b6d3-4380-4cc9-bfa8-5886779b6f98' target="_blank" rel="noopener noreferrer">Check it out! </a>
 
           </Box>
