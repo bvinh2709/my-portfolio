@@ -22,7 +22,7 @@ function App() {
     <>
       <BrowserRouter>
         <ToastContainer />
-        <Box display='flow' sx={{ backgroundImage: "url('../public/img/ruvim.jpg')" }}>
+        <Box display='flow' sx={{ backgroundImage: "url('./img/ruvim.jpg')" }}>
           <Box>
             <Navbar />
             <Routes>
