@@ -42,9 +42,9 @@ const Works = () => {
 
             </Box>
             <Box
-             height='25rem'
+             height='18rem'
              sx={{ objectFit: 'cover', position: 'absolute',
-                  top: '15rem', bottom: 0, left: 0, right: 0, margin: 'auto',
+                  top: '13.5rem', bottom: 0, left: 0, right: 0, margin: 'auto',
              }}
             >
               {work === "TicketHub" ? (<ProductDesign

@@ -81,7 +81,7 @@ const Who = () => {
             <Box
               height='50%'
               sx={{ objectFit: 'cover', position: 'absolute',
-                   top: '140%', bottom: 0, left: 0, right: 0, margin: 'auto',
+                   top: '150%', bottom: 0, left: 0, right: 0, margin: 'auto',
               }}
             >
               <Canvas camera={{ fov:25, position:[5,5,5] }}>
