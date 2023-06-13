@@ -13,7 +13,7 @@ import allStates from "../../../public/allstates.json";
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 const offsets = {
-  TX: [32, 96]
+  TX: [10, 10]
 };
 
 const Map = () => {
@@ -60,7 +60,7 @@ const Map = () => {
             })}
             <Marker coordinates={[-96.4747, 32.7479]}>
                 <text y="2" fontSize={14} textAnchor="middle">
-                  I live here in Forney, TX
+                  I live here in Dallas, TX
                 </text>
               </Marker>
           </>

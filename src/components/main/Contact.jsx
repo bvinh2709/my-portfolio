@@ -24,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (name.trim() || email.trim() || message.trim() === '') {
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
       setError('Required');
       return;
     }
