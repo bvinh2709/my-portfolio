@@ -44,7 +44,7 @@ const Works = () => {
             <Box
              height='18rem'
              sx={{ objectFit: 'cover', position: 'absolute',
-                  top: '19rem', bottom: 0, left: 0, right: 0, margin: 'auto',
+                  top: '20rem', bottom: 0, left: 0, right: 0, margin: 'auto',
              }}
             >
               {work === "TicketHub" ? (<ProductDesign
@@ -71,10 +71,9 @@ const Works = () => {
                 >
                     {data.map((item) => (
                         <ListItem key={item} text={item} onClick={() => setWork(item)}
-                          fontSize='5.5rem' fontWeight='bold' color='transparent'
-                          position='relative'
+
                           sx={{ fontSize: '5.5rem', fontWeight:'bold', color: 'white',
-                            position: 'relative'
+                            position: 'relative', cursor: 'pointer',
                           }}
                         >
                           {item}
