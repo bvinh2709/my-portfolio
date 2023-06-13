@@ -18,7 +18,9 @@ const WebDesign = () => {
             borderRadius='10px' position='absolute'
             top='100px' right='100px' fontSize='14px' fontWeight={300}
             sx={{ backgroundColor: 'white', color:'black', width: '300px', height:'100px',}}
-        >Online restaurant that sells soul food and let customers check out through Stripe. <a href='https://flatburger.render.com' target="_blank" rel="noopener noreferrer">Check it out! </a></Box>
+        >Online restaurant that sells soul food and let customers check out through Stripe. <a href='https://flatburger.render.com' target="_blank" rel="noopener noreferrer">Check it out! </a>
+
+        </Box>
       </>
     )
   }

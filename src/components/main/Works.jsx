@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, List } from '@mui/material'
+import { Box, ListItem } from '@mui/material'
 import ProductDesign from '../works/ProductDesign'
 import WebDesign from '../works/WebDesign'
 import Development from '../works/Development'
@@ -14,7 +14,7 @@ const Works = () => {
   const [work, setWork] = useState("FlatBurger")
   return (
     <Box
-      height='100vh' display='flex' justifyContent='center' position='relative' marginTop='-150px'
+      height='100vh' display='flex' justifyContent='center' position='relative'
     >
         <Box
           width='1400px' display='flex' justifyContent='space-between'
@@ -26,7 +26,7 @@ const Works = () => {
                   display='flex' flexDirection='column' gap='20px'
                 >
                     {data.map((item) => (
-                        <List key={item} text={item} onClick={() => setWork(item)}
+                        <ListItem key={item} text={item} onClick={() => setWork(item)}
                           fontSize='90px' fontWeight='bold' color='transparent'
                           position='relative'
                           sx={{ fontSize: '70px', fontWeight:'bold', color: 'white',
@@ -34,9 +34,10 @@ const Works = () => {
                           }}
                         >
                           {item}
-                        </List>
+                        </ListItem>
                     ))}
                 </Box>
+
             </Box>
             <Box
               flex={1}
@@ -45,6 +46,7 @@ const Works = () => {
               : work === "FlatBurger" ? (<WebDesign />)
               : (<Development />)}
             </Box>
+
         </Box>
     </Box>
   )

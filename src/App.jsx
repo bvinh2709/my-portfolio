@@ -4,7 +4,8 @@ import Who from "./components/main/Who"
 import Works from "./components/main/Works"
 import { Box } from "@mui/material"
 import Navbar from './components/main/Navbar'
-
+import {ToastContainer} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
 import {
   BrowserRouter,
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer />
         <Box display='flow' sx={{ backgroundImage: "url('../public/img/ruvim.jpg')" }}>
           <Box>
             <Navbar />
