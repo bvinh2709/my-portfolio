@@ -10,7 +10,7 @@ const Footer = () => {
     const navigate = useNavigate()
   return (
     <Box
-        sx={{ marginTop: isMobile ? '120%' : ''}}
+        sx={{ marginTop: isMobile ? '110%' : ''}}
         height='10rem'
         padding='1rem'
         display='flex'
