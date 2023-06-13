@@ -14,11 +14,11 @@ const ProductDesign = () => {
             <OrbitControls autoRotate />
         </Canvas>
         <Box
-            width='300px' height='100px' padding='20px'
-            borderRadius='10px' position='absolute'
-            top='100px' right='100px' fontSize='14px' fontWeight={300}
-            sx={{ backgroundColor: 'white', color:'black',}}
-        >Ticket hub where concert goers can purchase tickets and check their profile. <a href='https://flatburger.render.com' target="_blank" rel="noopener noreferrer">Check it out! </a></Box>
+            padding='1.3rem'
+            borderRadius='0.8rem' position='absolute'
+            top='6rem' right='6rem' fontSize='0.9rem' fontWeight={300}
+            sx={{ backgroundColor: 'white', color:'black', width: '20rem', height:'6rem',}}
+        >Ticket hub where concert goers can purchase tickets and check their profile. <a href='https://www.loom.com/share/af6b1504c8ca4a14b705afb3c5c93871?sid=dbc16216-2434-4afc-a8cd-1ac4286e4a56' target="_blank" rel="noopener noreferrer">Check it out! </a></Box>
       </>
     )
   }

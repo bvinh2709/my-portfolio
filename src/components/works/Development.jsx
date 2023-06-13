@@ -14,10 +14,10 @@ const Development = () => {
             <OrbitControls autoRotate />
         </Canvas>
         <Box
-            width='300px' height='100px' padding='20px'
-            borderRadius='10px' position='absolute'
-            top='100px' right='100px' fontSize='14px' fontWeight={300}
-            sx={{ backgroundColor: 'white', color:'black',}}
+            padding='1.3rem'
+            borderRadius='0.8rem' position='absolute'
+            top='6rem' right='6rem' fontSize='0.9rem' fontWeight={300}
+            sx={{ backgroundColor: 'white', color:'black', width: '20rem', height:'6rem',}}
         >More projects are under heavy development...</Box>
       </>
     )

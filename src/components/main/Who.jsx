@@ -91,8 +91,6 @@ const Who = () => {
                 <Cube />
               </Canvas>
             </Box>
-
-
           </Box>
         </Box>
       </Box>
