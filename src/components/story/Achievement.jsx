@@ -74,7 +74,7 @@ const Achievement = () => {
             <Box
               height='30%'
               sx={{ objectFit: 'cover', position: 'absolute',
-                   top: '100%', bottom: 0, left: 0, right: 0, margin: 'auto',
+                   top: '110%', bottom: 0, left: 0, right: 0, margin: 'auto',
 
               }}
               component='img'
