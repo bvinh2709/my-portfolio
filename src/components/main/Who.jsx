@@ -37,7 +37,7 @@ const Who = () => {
                       justifyContent:'center'
                 }}
               >
-                Think outside the box and Persue perfection
+                Think outside the box and Pursue perfection
               </Typography>
               <Box
                 display='flex' alignItems='center' gap='0.5rem' padding='0.5rem'
@@ -128,7 +128,7 @@ const Who = () => {
               sx={{fontSize: isMobile ? '2rem' : '4.5rem', display: isMobile ? 'flex' : '',
                     justifyContent: isMobile ? 'center' : 'none'
                 }}
-              >Think outside the box and Persue perfection</Typography>
+              >Think outside the box and Pursue perfection</Typography>
             </Box>
             <Box
               display='flex' alignItems='center' gap='0.5rem' padding='0.5rem'
